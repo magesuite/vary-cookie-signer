@@ -1,0 +1,15 @@
+{
+  "name": "creativestyle/magesuite-vary-cookie-signer",
+  "description": "X-Magento-Vary Cookie Signer",
+  "homepage": "https://creativestyle.de",
+  "license": "OSL-3.0",
+  "type": "magento2-module",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "MageSuite\\VaryCookieSigner\\": ""
+    }
+  }
+}
