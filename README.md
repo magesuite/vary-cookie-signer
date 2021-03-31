@@ -5,7 +5,7 @@ When varnish server is used this is handled by adding content of `X-Magento-Vary
 
 This can be abused to bypass varnish page cache and generate high load on php server by generating random value for every request.
 
-This extension provide a way to verify valid cookie on varnish server by providing extra cookie called `X-Magento-Vary-Sign` containing sha1 hash of `X-Magento-Vary` cookie content and signing key (with should be random value).
+This extension provide a way to verify valid cookie on varnish server by providing extra cookie called `X-Magento-Vary-Sign` containing sha1 hash of `X-Magento-Vary` cookie content and signing key (which should be random value).
 Without knowing secret, attacker isn't able to generate correctly signed cookie and we can verify it on varnish server and ignore incorrect values, therefore reuse cached page.
 
 ## Magento configuration
