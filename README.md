@@ -52,4 +52,4 @@ NOTE: First if statement can only fail when `update` is called after `finish`, b
 
 Do not forget to replace `REPLACE_THIS_WITH_SIGNING_KEY` with your unique random string, and make sure you use the same value in varnish and magento.
 
-https://creativestyle.atlassian.net/wiki/spaces/MGSDEV/pages/2359951361/Copy+of+TranslationInherit+optional
+https://creativestyle.atlassian.net/wiki/spaces/MGSDEV/pages/2359951361/VaryCookieSigner+optional
