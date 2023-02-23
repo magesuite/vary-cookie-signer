@@ -51,3 +51,5 @@ if (req.http.cookie ~ "X-Magento-Vary=") {
 NOTE: First if statement can only fail when `update` is called after `finish`, but this is not possible, however VCL do not allow calling object methods, therefore this function mainly as workaround to this limitation.
 
 Do not forget to replace `REPLACE_THIS_WITH_SIGNING_KEY` with your unique random string, and make sure you use the same value in varnish and magento.
+
+https://creativestyle.atlassian.net/wiki/spaces/MGSDEV/pages/2359951361/Copy+of+TranslationInherit+optional
