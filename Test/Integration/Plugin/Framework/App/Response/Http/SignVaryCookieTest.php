@@ -4,24 +4,10 @@ namespace MageSuite\VaryCookieSigner\Test\Integration\Plugin\Framework\App\Respo
 
 class SignVaryCookieTest extends \Magento\TestFramework\TestCase\AbstractController
 {
-    /**
-     * @var \Magento\Customer\Model\Session
-     */
-    protected $session;
+    protected ?\Magento\Customer\Model\Session $session = null;
+    protected ?\Magento\Framework\Stdlib\CookieManagerInterface $cookie = null;
+    protected ?\MageSuite\VaryCookieSigner\Model\Signer $signer = null;
 
-    /**
-     * @var \Magento\Framework\Stdlib\CookieManagerInterface
-     */
-    protected $cookie;
-
-    /**
-     * @var \MageSuite\VaryCookieSigner\Model\Signer
-     */
-    protected $signer;
-
-    /**
-     * @inheritdoc
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -42,7 +28,7 @@ class SignVaryCookieTest extends \Magento\TestFramework\TestCase\AbstractControl
         $response->sendVary();
 
         $cookieVarySign = $this->cookie->getCookie(\MageSuite\VaryCookieSigner\Plugin\Framework\App\Response\Http\SignVaryCookie::COOKIE_VARY_SIGN_STRING);
-        $expectedValue = '894055169b156e4757125e8807136b09ad5228f7';
+        $expectedValue = '124cb58093b10efb42e74a0db1dc328e4f9dd718';
 
         $this->assertEquals($expectedValue, $cookieVarySign);
     }

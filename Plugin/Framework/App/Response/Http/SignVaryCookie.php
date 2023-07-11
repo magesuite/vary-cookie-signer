@@ -1,40 +1,19 @@
 <?php
 
+declare(strict_types=1);
+
 namespace MageSuite\VaryCookieSigner\Plugin\Framework\App\Response\Http;
 
 class SignVaryCookie
 {
-    const COOKIE_VARY_SIGN_STRING = 'X-Magento-Vary-Sign';
+    public const COOKIE_VARY_SIGN_STRING = 'X-Magento-Vary-Sign';
 
-    /**
-     * @var \Magento\Framework\App\Request\Http
-     */
-    protected $request;
-
-    /**
-     * @var \Magento\Framework\Stdlib\CookieManagerInterface
-     */
-    protected $cookieManager;
-
-    /**
-     * @var \Magento\Framework\Stdlib\Cookie\CookieMetadataFactory
-     */
-    protected $cookieMetadataFactory;
-
-    /**
-     * @var \Magento\Framework\App\Http\Context
-     */
-    protected $context;
-
-    /**
-     * @var \Magento\Framework\Session\Config\ConfigInterface
-     */
-    protected $sessionConfig;
-
-    /**
-     * @var \MageSuite\VaryCookieSigner\Model\Signer
-     */
-    protected $signer;
+    protected \Magento\Framework\App\Request\Http $request;
+    protected \Magento\Framework\Stdlib\CookieManagerInterface $cookieManager;
+    protected \Magento\Framework\Stdlib\Cookie\CookieMetadataFactory $cookieMetadataFactory;
+    protected \Magento\Framework\App\Http\Context $context;
+    protected \Magento\Framework\Session\Config\ConfigInterface $sessionConfig;
+    protected \MageSuite\VaryCookieSigner\Model\Signer $signer;
 
     public function __construct(
         \Magento\Framework\App\Request\Http $request,
