@@ -4,12 +4,15 @@
   "homepage": "https://creativestyle.de",
   "license": "OSL-3.0",
   "type": "magento2-module",
+  "require": {
+      "magento/framework": ">=103.0.5 <130.0.5-p5"
+  },
   "autoload": {
-    "files": [
-      "registration.php"
-    ],
-    "psr-4": {
-      "MageSuite\\VaryCookieSigner\\": ""
-    }
+      "files": [
+          "registration.php"
+      ],
+      "psr-4": {
+          "MageSuite\\VaryCookieSigner\\": ""
+      }
   }
 }
