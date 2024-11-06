@@ -1,3 +1,6 @@
+## Compatibility
+Version 2.x of module is compatible with Magento 2.4.5 to 2.4.5-p4.
+
 ## Motivation
 Magento uses special cookie called `X-Magento-Vary` to distinguish between different variants of some pages (eg. PDP page for customers with special discount).
 
